@@ -70,7 +70,7 @@ export default function Projects() {
         
         {/* Section Heading */}
         <div className="section-heading reveal">
-          <h2 className="section-title">Our Robots</h2>
+          <h2 className="section-title">Robot</h2>
           <p className="section-subtitle">
             The engineering evolution of Phantom. From simple attachments to autonomous systems.
           </p>

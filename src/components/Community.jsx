@@ -37,6 +37,22 @@ export default function Community() {
           </p>
         </div>
 
+        <div className="sponsor-logos reveal">
+          <h3 className="sponsor-logos-title">Our Sponsors</h3>
+          <div className="sponsor-logos-row">
+            {['logo1.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo5.png', 'logo6.png', 'logo7.png'].map((logo) => (
+              <div key={logo} className="sponsor-logo-card">
+                <img
+                  src={`/images/sponsors/${logo}`}
+                  alt={`Sponsor logo ${logo}`}
+                  className="sponsor-logo-img"
+                  onError={(e) => { e.target.style.display = 'none'; }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="community-grid">
           {/* Outreach & Mission Info */}
           <div className="community-info-side reveal">
@@ -224,6 +240,52 @@ export default function Community() {
           font-size: 0.85rem;
           font-weight: 600;
           text-align: center;
+        }
+
+        .sponsor-logos {
+          margin-bottom: 3rem;
+        }
+
+        .sponsor-logos-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+
+        .sponsor-logos-row {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+          gap: 1rem;
+          align-items: center;
+          justify-items: center;
+        }
+
+        .sponsor-logo-card {
+          width: 100%;
+          min-height: 110px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+          border-radius: var(--border-radius-lg);
+          background: var(--bg-secondary);
+          border: 1px dashed var(--glass-border);
+          text-align: center;
+          position: relative;
+        }
+
+        .sponsor-logo-img {
+          max-width: 100%;
+          max-height: 80px;
+          object-fit: contain;
+        }
+
+        .sponsor-logo-placeholder {
+          color: var(--text-secondary);
+          font-size: 0.85rem;
+          line-height: 1.4;
+          padding: 0 0.5rem;
         }
 
         .community-grid {

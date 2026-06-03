@@ -41,13 +41,13 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Community />
       <About />
       <Team />
       <Projects />
       <Tutorials />
       <ComicReader />
       <Gallery />
-      <Community />
       <Footer />
     </>
   );

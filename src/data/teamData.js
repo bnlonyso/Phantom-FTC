@@ -7,18 +7,18 @@ export const teamData = [
     image: "/images/bekaiym.jpeg"
   },
   {
-    id: "nurbaq",
-    name: "Nurbaq Imanbayev",
-    role: "Inspire",
-    description: "Grade 11 student at NIS Shymkent. Leads outreach activities, manages team documentation, and coordinates presentations, sponsorships, and community engagement projects.",
-    image: "/images/nurbaq.jpeg"
-  },
-  {
     id: "sanzhar-k",
     name: "Sanzhar Kalybek",
     role: "Captain / Builder",
     description: "Grade 11 student at NIS Shymkent. Coordinates team operations, schedules, and oversees overall robot assembly.",
     image: "/images/Sanzhar.png"
+  },
+  {
+    id: "nurbaq",
+    name: "Nurbaq Imanbayev",
+    role: "Inspire",
+    description: "Grade 11 student at NIS Shymkent. Leads outreach activities, manages team documentation, and coordinates presentations, sponsorships, and community engagement projects.",
+    image: "/images/nurbaq.jpeg"
   },
   {
     id: "sussar",

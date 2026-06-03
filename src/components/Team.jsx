@@ -22,7 +22,7 @@ export default function Team() {
         <div className="section-heading reveal">
           <h2 className="section-title">Meet the Team</h2>
           <p className="section-subtitle">
-            Engineers, coders, and designers building the future with their own hands.
+            Engineers, coders, Lony, and designers building the future with their own hands.
           </p>
         </div>
 
