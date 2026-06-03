@@ -1,5 +1,12 @@
 export const teamData = [
   {
+    id: "bekaiym",
+    name: "Bekaiym Makhamatzhanova",
+    role: "Mentor",
+    description: "Provides technical guidance, supports team development, and oversees project planning, problem-solving, and competition preparation.",
+    image: "/images/bekaiym.jpeg"
+  },
+  {
     id: "nurbaq",
     name: "Nurbaq Imanbayev",
     role: "Inspire",
@@ -18,7 +25,7 @@ export const teamData = [
     name: "Sussar Zhakyp",
     role: "Designer",
     description: "Grade 11. Creates visual assets, team logos, presentation graphics, and comic illustrations.",
-    image: "susar.PNG"
+    image: "/images/susar.jpeg"
   },
   {
     id: "zangar",
