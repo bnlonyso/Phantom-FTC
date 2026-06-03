@@ -5,7 +5,6 @@ import About from "./components/About";
 import Team from "./components/Team";
 import Projects from "./components/Projects";
 import Tutorials from "./components/Tutorials";
-import LearningHub from "./components/LearningHub";
 import ComicReader from "./components/ComicReader";
 import Gallery from "./components/Gallery";
 import Community from "./components/Community";
@@ -46,7 +45,6 @@ function App() {
       <Team />
       <Projects />
       <Tutorials />
-      <LearningHub />
       <ComicReader />
       <Gallery />
       <Community />

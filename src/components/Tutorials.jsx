@@ -1,39 +1,43 @@
 import React, { useState } from "react";
-import { tutorialData } from "../data/tutorialData";
-import { Search, Play, X, Clock, HelpCircle } from "lucide-react";
+import { Play, X, Clock, HelpCircle } from "lucide-react";
 
 export default function Tutorials() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
   const [activeVideo, setActiveVideo] = useState(null);
 
-  const categories = [
-    "All",
-    "Programming",
-    "CAD Design",
-    "Mechanical Engineering",
-    "FTC Strategy",
-    "Autonomous Programming",
-    "Electronics"
+  const learningVideos = [
+    {
+      id: "video-1",
+      title: "Arduino Lesson #0 — What is Arduino, sensor wiring, and power supply",
+      category: "Arduino",
+      difficulty: "Beginner",
+      duration: "10:29",
+      description: "Learn the basics of Arduino power and sensor connections for reliable project buildouts.",
+      thumbnail: "/images/phantom.png",
+      videoUrl: "/videos/video1.mp4"
+    },
+    {
+      id: "video-2",
+      title: "Arduino Lesson #1 — Program structure and data types",
+      category: "Arduino",
+      difficulty: "Beginner",
+      duration: "7:26",
+      description: "Understand Arduino sketch structure and data types to write clean and correct code.",
+      thumbnail: "/images/phantom.png",
+      videoUrl: "/videos/video2.mp4"
+    },
+    {
+      id: "video-3",
+      title: "Arduino Lesson #1.1 — Working with variables and constants",
+      category: "Arduino",
+      difficulty: "Beginner",
+      duration: "6:33",
+      description: "Master Arduino variables and constants for stable program logic and easier debugging.",
+      thumbnail: "/images/phantom.png",
+      videoUrl: "/videos/video3.mp4"
+    }
   ];
 
-  // Map category to English text (direct return since it's already in English)
-  const getCategoryLabel = (cat) => {
-    return cat;
-  };
-
-  // Filter tutorials based on query & category
-  const filteredTutorials = tutorialData.filter((tut) => {
-    const matchesCategory = selectedCategory === "All" || tut.category === selectedCategory;
-    const matchesSearch = 
-      tut.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      tut.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      tut.category.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  // Featured Tutorial (first item in catalog)
-  const featuredTutorial = tutorialData[0];
+  const getCategoryLabel = (cat) => cat;
 
   return (
     <section id="tutorials" className="tutorials-section">
@@ -47,113 +51,38 @@ export default function Tutorials() {
           </p>
         </div>
 
-        {/* Featured Tutorial Banner */}
-        {featuredTutorial && (
-          <div className="featured-tutorial-card glass reveal">
-            <div className="featured-image-side">
-              <img src={featuredTutorial.thumbnail} alt={featuredTutorial.title} className="featured-img" />
-              <button 
-                className="play-overlay-btn"
-                onClick={() => setActiveVideo(featuredTutorial)}
-                aria-label="Play Featured Video"
-              >
-                <Play size={32} fill="currentColor" />
-              </button>
-            </div>
-            <div className="featured-info-side">
-              <div className="featured-tag">Featured Video</div>
-              <h3 className="featured-title">{featuredTutorial.title}</h3>
-              <p className="featured-desc">{featuredTutorial.description}</p>
-              
-              <div className="featured-meta">
-                <span className="meta-badge"><Clock size={14} /> {featuredTutorial.duration}</span>
-                <span className="meta-badge"><HelpCircle size={14} /> {featuredTutorial.difficulty}</span>
-                <span className="meta-badge category">{getCategoryLabel(featuredTutorial.category)}</span>
-              </div>
-              
-              <button 
-                onClick={() => setActiveVideo(featuredTutorial)} 
-                className="btn-primary featured-play-btn"
-              >
-                <Play size={16} fill="currentColor" />
-                <span>Start Watching</span>
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Search & Filter Toolbar */}
-        <div className="toolbar-container reveal">
-          <div className="search-wrapper glass">
-            <Search className="search-icon" size={18} />
-            <input 
-              type="text" 
-              placeholder="Search tutorials (e.g., RoadRunner, Onshape)..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input"
-            />
-            {searchQuery && (
-              <button onClick={() => setSearchQuery("")} className="clear-search-btn">
-                <X size={14} />
-              </button>
-            )}
-          </div>
-
-          <div className="filter-scroll-wrapper">
-            <div className="category-filters-row">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`filter-chip ${selectedCategory === cat ? "active" : ""}`}
+        <div className="learning-videos-list">
+          {learningVideos.map((video) => (
+            <div key={video.id} className="featured-tutorial-card glass reveal">
+              <div className="featured-image-side">
+                <img src={video.thumbnail} alt={video.title} className="featured-img" />
+                <button 
+                  className="play-overlay-btn"
+                  onClick={() => setActiveVideo(video)}
+                  aria-label="Play Video"
                 >
-                  {getCategoryLabel(cat)}
+                  <Play size={32} fill="currentColor" />
                 </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Video Grid */}
-        <div className="tutorials-grid">
-          {filteredTutorials.length > 0 ? (
-            filteredTutorials.map((tut) => (
-              <div key={tut.id} className="tutorial-card glass reveal">
-                <div className="tut-thumbnail-wrapper" onClick={() => setActiveVideo(tut)}>
-                  <img src={tut.thumbnail} alt={tut.title} className="tut-thumbnail" />
-                  <div className="tut-play-overlay">
-                    <div className="play-icon-circle">
-                      <Play size={20} fill="currentColor" />
-                    </div>
-                  </div>
-                  <span className="tut-duration">{tut.duration}</span>
-                </div>
-                <div className="tut-content">
-                  <div className="tut-meta-row">
-                    <span className={`difficulty-badge ${tut.difficulty.toLowerCase()}`}>
-                      {tut.difficulty}
-                    </span>
-                    <span className="category-label">{getCategoryLabel(tut.category)}</span>
-                  </div>
-                  <h4 className="tut-title" onClick={() => setActiveVideo(tut)}>{tut.title}</h4>
-                  <p className="tut-desc">{tut.description}</p>
-                </div>
               </div>
-            ))
-          ) : (
-            <div className="no-results glass reveal">
-              <HelpCircle size={40} className="text-silver" />
-              <h4>No Results Found</h4>
-              <p>Try adjusting your search query or selecting a different category filter.</p>
-              <button 
-                onClick={() => { setSearchQuery(""); setSelectedCategory("All"); }}
-                className="btn-secondary btn-sm"
-              >
-                Reset Filters
-              </button>
+              <div className="featured-info-side">
+                <div className="featured-tag">Learning Video</div>
+                <h3 className="featured-title">{video.title}</h3>
+                <p className="featured-desc">{video.description}</p>
+                <div className="featured-meta">
+                  <span className="meta-badge"><Clock size={14} /> {video.duration}</span>
+                  <span className="meta-badge"><HelpCircle size={14} /> {video.difficulty}</span>
+                  <span className="meta-badge category">{getCategoryLabel(video.category)}</span>
+                </div>
+                <button 
+                  onClick={() => setActiveVideo(video)} 
+                  className="btn-primary featured-play-btn"
+                >
+                  <Play size={16} fill="currentColor" />
+                  <span>Start Watching</span>
+                </button>
+              </div>
             </div>
-          )}
+          ))}
         </div>
 
       </div>
@@ -172,10 +101,10 @@ export default function Tutorials() {
             </button>
             
             <div className="video-player-container">
-              <video 
-                src={activeVideo.videoUrl} 
-                controls 
-                autoPlay 
+              <video
+                src={activeVideo.videoUrl}
+                controls
+                autoPlay
                 playsInline
                 className="modal-video-element"
               />

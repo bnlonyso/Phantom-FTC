@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { teamData } from "../data/teamData";
 import { User, Cpu, Code2, PenTool, Radio, Compass } from "lucide-react";
 
 export default function Team() {
-  const [activeRoleFilter, setActiveRoleFilter] = useState("all");
-
   const getRoleIcon = (role) => {
     const r = role.toLowerCase();
     if (r.includes("mentor")) return <User size={16} />;
@@ -15,28 +13,6 @@ export default function Team() {
     if (r.includes("smm") || r.includes("external")) return <Radio size={16} />;
     return <User size={16} />;
   };
-
-  const categories = [
-    { id: "all", label: "All" },
-    { id: "lead", label: "Leadership" },
-    { id: "tech", label: "Technical Dept." },
-    { id: "creative", label: "Creative Dept." }
-  ];
-
-  const filteredTeam = teamData.filter((member) => {
-    if (activeRoleFilter === "all") return true;
-    const role = member.role.toLowerCase();
-    if (activeRoleFilter === "lead") {
-      return role.includes("mentor") || role.includes("captain");
-    }
-    if (activeRoleFilter === "tech") {
-      return role.includes("builder") || role.includes("coder") || role.includes("programmer") || role.includes("cad");
-    }
-    if (activeRoleFilter === "creative") {
-      return role.includes("designer") || role.includes("smm") || role.includes("external");
-    }
-    return true;
-  });
 
   return (
     <section id="team" className="team-section">
@@ -50,22 +26,9 @@ export default function Team() {
           </p>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="team-filters reveal">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveRoleFilter(cat.id)}
-              className={`filter-tab ${activeRoleFilter === cat.id ? "active" : ""}`}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
-
         {/* Team Grid */}
         <div className="team-grid">
-          {filteredTeam.map((member) => (
+          {teamData.map((member) => (
             <div key={member.id} className="team-card glass reveal">
               <div className="member-image-wrapper">
                 <img 

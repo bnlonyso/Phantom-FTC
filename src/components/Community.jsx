@@ -37,31 +37,6 @@ export default function Community() {
           </p>
         </div>
 
-        {/* Videos Section */}
-        <div className="videos-section reveal">
-          <h3 className="videos-title">Featured Videos</h3>
-          <div className="videos-grid">
-            <div className="video-card video-player">
-              <video controls width="100%" poster="/images/phantom.png">
-                <source src="/videos/video1.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div className="video-card video-player">
-              <video controls width="100%" poster="/images/phantom.png">
-                <source src="/videos/video2.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div className="video-card video-player">
-              <video controls width="100%" poster="/images/phantom.png">
-                <source src="/videos/video3.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-
         <div className="community-grid">
           {/* Outreach & Mission Info */}
           <div className="community-info-side reveal">

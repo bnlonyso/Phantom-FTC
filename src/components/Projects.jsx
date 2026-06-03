@@ -8,7 +8,7 @@ export default function Projects() {
   const robots = [
     {
       id: "v2",
-      name: "Phantom v2.0 \"Viper\"",
+      name: "Phantomaz \"Viper\"",
       season: "Season 2025–2026 (Into the Deep / DECODE)",
       image: "/images/phantom_dark.png",
       badge: "Champion & Record Holder",
@@ -40,7 +40,7 @@ export default function Projects() {
         "Kazakhstan Previous National Record (766 points in a match)",
         "Qualified for Asia Championship Tournament"
       ]
-    },
+    }
   ];
 
   const getSpecTabIcon = (tab) => {
@@ -53,7 +53,16 @@ export default function Projects() {
     }
   };
 
-  const selectedRobot = robots.find(r => r.id === activeSpecRobot);
+  const scrollToSpecs = (robotId) => {
+    setActiveSpecRobot(robotId);
+    setActiveSpecTab("mech");
+    const section = document.getElementById("robot-specs");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const selectedRobot = robots.find(r => r.id === activeSpecRobot) || robots[0];
 
   return (
     <section id="projects" className="projects-section">
@@ -103,7 +112,7 @@ export default function Projects() {
                 </div>
                 
                 <button 
-                  onClick={() => { setActiveSpecRobot(robot.id); setActiveSpecTab("mech"); }}
+                  onClick={() => scrollToSpecs(robot.id)}
                   className={`btn-secondary robot-spec-trigger ${activeSpecRobot === robot.id ? "active-border" : ""}`}
                 >
                   View Specifications
@@ -114,23 +123,9 @@ export default function Projects() {
         </div>
 
         {/* Interactive Spec Sheet Console */}
-        <div className="spec-sheet-console glass reveal">
+        <div id="robot-specs" className="spec-sheet-console glass reveal">
           <div className="console-header">
             <h3 className="console-title">Technical Specifications: {selectedRobot.name}</h3>
-            <div className="console-robot-selector">
-              <button 
-                onClick={() => { setActiveSpecRobot("v2"); setActiveSpecTab("mech"); }}
-                className={`robot-selector-btn ${activeSpecRobot === "v2" ? "active" : ""}`}
-              >
-                Phantom v2.0
-              </button>
-              <button 
-                onClick={() => { setActiveSpecRobot("v1"); setActiveSpecTab("mech"); }}
-                className={`robot-selector-btn ${activeSpecRobot === "v1" ? "active" : ""}`}
-              >
-                Phantom v1.0
-              </button>
-            </div>
           </div>
 
           <div className="console-tabs">
@@ -309,37 +304,6 @@ export default function Projects() {
           font-size: 1.5rem;
         }
 
-        .console-robot-selector {
-          display: flex;
-          gap: 6px;
-          background: var(--bg-secondary);
-          padding: 4px;
-          border-radius: var(--border-radius-full);
-          border: 1px solid var(--glass-border);
-        }
-
-        .robot-selector-btn {
-          background: transparent;
-          border: none;
-          outline: none;
-          color: var(--text-secondary);
-          padding: 6px 16px;
-          font-size: 0.85rem;
-          font-weight: 600;
-          border-radius: var(--border-radius-full);
-          cursor: pointer;
-          transition: var(--transition-fast);
-        }
-
-        .robot-selector-btn:hover {
-          color: var(--text-primary);
-        }
-
-        .robot-selector-btn.active {
-          background: var(--bg-primary);
-          color: var(--text-primary);
-          box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        }
 
         .console-tabs {
           display: flex;
