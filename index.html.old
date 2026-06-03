@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/phantom.png" type="image/png">
+    <title>Phantom</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo"><a href="#">Phantom FTC</a></div>
+      <ul class="nav__links" id="nav-links">
+        <li class="link"><a href="#home">Главная</a></li>
+        <li class="link"><a href="#about">Команда</a></li>
+        <li class="link"><a href="#portfolio">События</a></li>
+        <li class="link"><a href="#client">Ресурсы</a></li>
+        <li class="link"><a href="#news">Блог</a></li>
+        <li class="link"><a href="#contact">Контакты</a></li>
+      </ul>
+      <div class="nav__menu__btn" id="menu-btn">
+        <span><i class="ri-menu-3-line"></i></span>
+      </div>
+    </nav>
+    <header class="section__container header__container" id="home">
+      <div class="header__content">
+        <h1>We Are a Team of Young Engineers and Innovators</h1>
+        <div class="header__content__details">
+          <p>
+            First Tech Challenge - международное соревнование по робототехнике, где команды создают, программируют и совершенствуют роботов, решая реальные инженерные задачи.
+          </p>
+          <a href="#33830"><button class="btn">Начать</button></a>
+        </div>
+      </div>
+      <div class="header__image">
+        <img src="images/phantom_dark.png" alt="header" />  
+        <img src="images/team_01.jpg" alt="header" />   
+      </div>
+    </header>
+
+    <section class="section__container about__container" id="about">
+      <div class="about__header">
+        <div class="about__image">
+          <img src="images/team_02.jpg" alt="about" />
+        </div>
+        <div class="about__content">
+          <p class="section__subheader" id="33830">Команда</p>
+          <h2 class="section__header">Наша команда - это сочетание технологий, творчества и стремления к развитию.</h2>
+          <p class="paragraph">
+            Мы не просто строим роботов - мы учимся решать реальные инженерные задачи, работать в условиях ограниченного времени и принимать ответственные решения. Участие в FTC даёт нам возможность развивать навыки, которые будут востребованы в будущем: критическое мышление, коммуникацию, лидерство и инновационный подход.
+
+
+          </p>
+          <a href="#33830_2"><button class="btn">Узнать больше</button></a>
+        </div>
+      </div>
+      <div class="about__grid">
+        <div class="about__card">
+          <span><i class="ri-pen-nib-line"></i></span>
+          <div>
+            <h4>Планирование</h4>
+            <p>
+              На этом этапе команда анализирует задание сезона FTC, изучает правила и разрабатывает стратегию. Мы распределяем роли, продумываем конструкцию робота и выбираем оптимальные технические решения.
+            </p>
+          </div>
+        </div>
+        <div class="about__card">
+          <span><i class="ri-layout-masonry-line"></i></span>
+          <div>
+            <h4>Разработка</h4>
+            <p>
+              Мы проектируем, собираем и программируем робота. Команда работает над механикой, электроникой и программным обеспечением, постоянно улучшая конструкцию и функциональность.
+            </p>
+          </div>
+        </div>
+        <div class="about__card">
+          <span><i class="ri-checkbox-line"></i></span>
+          <div>
+            <h4>Тестирование</h4>
+            <p>
+             Готового робота мы многократно тестируем, выявляем ошибки и вносим улучшения. Этот этап помогает добиться надёжности, точности и стабильной работы робота в условиях соревнований.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container portfolio__container" id="portfolio">
+      <div class="portfolio__header">
+        <div>
+          <p class="section__subheader">Портфолио</p>
+          <h2 class="section__header">Последние события</h2>
+        </div>
+        <div>
+          <p class="paragraph">
+            Каждое соревнование даёт нам заряд энергии, новых идей и стремления становиться лучше.
+          </p>
+        </div>
+      </div>
+      <div class="portfolio__grid">
+        <div class="portfolio__card">
+          <!-- <img src="images/.jpg" alt="portfolio" /> -->
+          <video width="400" height="600" autoplay muted loop playsinline>
+            <source src="images/video_trk2026.mp4" type="video/mp4">
+            <source src="movie.webm" type="video/webm">
+          </video>
+        </div>
+        <div class="portfolio__card">
+          <video width="400" height="600" autoplay muted loop playsinline>
+            <source src="images/video_trk2026_happy.mp4" type="video/mp4">
+            <source src="movie.webm" type="video/webm">
+          </video>
+        </div>
+        <div class="portfolio__card">
+          <video width="400" height="600" autoplay muted loop playsinline>
+            <source src="images/video_almaty2025.mp4" type="video/mp4">
+            <source src="movie.webm" type="video/webm">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container client__container" id="client">
+      <div class="client__header">
+        <div id="33830_2">
+          <p class="section__subheader">#33830</p>
+          <h2 class="section__header">Phantom FTC</h2>
+        </div>
+      </div>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Sultanbek.jpg" alt="client" />
+              <div>
+                <h4>Исабеков Султанбек</h4>
+                <div class="client__ratings">
+                  <p>Mentor</p>
+                </div>
+                <p>
+                  Учитель информатики НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Sanzhar.png" alt="client" />
+              <div>
+                <h4>Қалыбек Санжар</h4>
+                <div class="client__ratings">
+                  <p>Captain</p>
+                </div>
+                <p>
+                  Ученик 11 класса НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Ulugbek.jpeg" alt="client" />
+              <div>
+                <h4>Рысбек Ұлұқбек</h4>
+                <div class="client__ratings">
+                  <p>Builder</p>
+                </div>
+                <p>
+                  Ученик 11 класса НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Zangar.png" alt="client" />
+              <div>
+                <h4>Фермебай Заңғар</h4>
+                <div class="client__ratings">
+                  <p>Builder</p>
+                </div>
+                <p>
+                  Ученик 11 класса НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Abdu.jpeg" alt="client" />
+              <div>
+                <h4>Ассил Абдурахман</h4>
+                <div class="client__ratings">
+                  <p>Coder</p>
+                </div>
+                <p>
+                  Ученик 11 класса НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Aibar.jpeg" alt="client" />
+              <div>
+                <h4>Зейтхан Айбар</h4>
+                <div class="client__ratings">
+                  <p>Coder</p>
+                </div>
+                <p>
+                  Ученик 11 класса НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Ibrahim.png" alt="client" />
+              <div>
+                <h4>Ақылбек Ибрахим</h4>
+                <div class="client__ratings">
+                  <p>External</p>
+                </div>
+                <p>
+                  Ученик 11 класса НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Shugyla.png" alt="client" />
+              <div>
+                <h4>Алишер Шұғыла</h4>
+                <div class="client__ratings">
+                  <p>Designer</p>
+                </div>
+                <p>
+                  Ученица 9 класса НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Ramazan.jpeg" alt="client" />
+              <div>
+                <h4>Пердебек Рамазан</h4>
+                <div class="client__ratings">
+                  <p>External</p>
+                </div>
+                <p>
+                  Ученик 11 класса НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>          
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Beka.jpeg" alt="client" />
+              <div>
+                <h4>Миракбар Бексултан</h4>
+                <div class="client__ratings">
+                  <p>СММ</p>
+                </div>
+                <p>
+                  Ученик 11 класса НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="images/Sanzhar2.jpeg" alt="client" />
+              <div class="card_bg">
+                <h4>Садыбек Санжар</h4>
+                <div class="client__ratings">
+                  <p>CAD Designer</p>
+                </div>
+                <p>
+                  Ученик 8 класса НИШ ФМН
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container news__container" id="news">
+      <p class="section__subheader">Блог</p>
+      <h2 class="section__header">Новости</h2>
+      <div class="news__grid">
+        <div class="news__card">
+          <img src="images/team_03.jpg" alt="news" />
+          <div>
+            <h4>FTC Central Asia 2026</h4>
+            <p>
+              «По итогам игр плей-офф соревнований по робототехнике FTC DECODE 2025–2026 команда Phantom FTC из учащихся Shymkent-Abai NIS заняла 1-е место в альянсе и выиграла путёвку на чемпионат Азии!»
+            </p>
+          </div>
+        </div>
+        
+        <div class="news__card">
+          <img src="images/record.png" alt="news" />
+          <div>
+            <h4>Almaty First Regional</h4>
+            <p>
+              «С рекордными 766 очками мы установили новый рекорд Казахстана!» 
+            </p>
+          </div>
+        </div>
+
+        <div class="news__card">
+          <img src="images/phantom_dark.png" alt="news" />
+          <div>
+            <h4>Phantom</h4>
+            <p>
+              Емааа дейтін тағы бір жаңалық
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section__container contact__container">
+        <h2 class="section__header">
+          Поддержите нашу команду - инвестируйте в будущее технологий и инноваций.
+        </h2>
+        <div class="contact__btn">
+          <button class="btn">Стать спонсором</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section__container footer__container">
+      <div class="footer__col">
+        <h5><a href="#">Phantom</a></h5>
+      </div>
+      <div class="footer__col">
+        <h4>Наши контакты</h4>
+        <p>НИШ Шымкент-Абай, Территория Элитный городок 6</p>
+        <p>+7 708 713 1034</p>
+        <p>nomadxftc@gmail.com</p>
+      </div>
+      <div class="footer__col">
+        <h4>О нас</h4>
+        <p>
+          Наша цель - развитие инженерного мышления, программирования и командной работы через создание и управление роботами.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Подпишитесь</h4>
+        <form action="/">
+          <input type="text" placeholder="Ваша почта" />
+          <button><i class="ri-send-plane-2-fill" style="color: #B60FF3;"></i></button>
+        </form>
+        <div class="footer__socials">
+          <h4>Follow Us</h4>
+          <div>
+            <a href="#"><i class="ri-youtube-line"></i></a>
+            <a href="https://www.instagram.com/phantom.ftc/"><i class="ri-instagram-line"></i></a> <!-- -box-fill -->
+            <a href="#"><i class="ri-tiktok-line"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer__bar">
+      Copyright © 2026 Phantom. Все права защищены.
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
