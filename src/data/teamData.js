@@ -1,10 +1,10 @@
 export const teamData = [
   {
-    id: "sultanbek",
-    name: "Sultanbek Isabekov",
-    role: "Mentor",
-    description: "Computer Science Teacher at NIS Shymkent. Guides the team in strategic planning and coding practices.",
-    image: "/images/Sultanbek.jpg"
+    id: "nurbaq",
+    name: "Nurbaq Imanbayev",
+    role: "Inspire",
+    description: "Grade 11 student at NIS Shymkent. Leads outreach activities, manages team documentation, and coordinates presentations, sponsorships, and community engagement projects.",
+    image: "/images/nurbaq.jpeg"
   },
   {
     id: "sanzhar-k",
@@ -14,11 +14,11 @@ export const teamData = [
     image: "/images/Sanzhar.png"
   },
   {
-    id: "ulugbek",
-    name: "Ulugbek Rysbek",
-    role: "Builder",
-    description: "Grade 11 student at NIS Shymkent. Designs and fabricates mechanical attachments and intake subsystems.",
-    image: "/images/Ulugbek.jpeg"
+    id: "sussar",
+    name: "Sussar Zhakyp",
+    role: "Designer",
+    description: "Grade 11. Creates visual assets, team logos, presentation graphics, and comic illustrations.",
+    image: "susar.PNG"
   },
   {
     id: "zangar",
@@ -49,18 +49,18 @@ export const teamData = [
     image: "/images/Ibrahim.png"
   },
   {
-    id: "shugyla",
-    name: "Shugyla Alisher",
-    role: "Designer",
-    description: "Grade 9 student at NIS Shymkent. Creates visual assets, team logos, presentation graphics, and comic illustrations.",
-    image: "/images/Shugyla.png"
+    id: "tmerei",
+    name: "Merey Tengebay",
+    role: "Inspire",
+    description: "Grade 11. Leads outreach activities, manages team documentation, and coordinates presentations, sponsorships, and community engagement projects.",
+    image: "images/tmerei.jpeg"
   },
   {
-    id: "ramazan",
-    name: "Ramazan Perdebek",
-    role: "External Relations",
-    description: "Grade 11 student at NIS Shymkent. Organizes community outreach events, school presentations, and coordinate with FTC networks.",
-    image: "/images/Ramazan.jpeg"
+    id: "mmerei",
+    name: "Merey Makhamatzhan",
+    role: "Designer",
+    description: "Grade 9 student at NIS Shymkent. Creates visual assets, team logos, presentation graphics, and comic illustrations.",
+    image: "images/mmerei.jpeg"
   },
   {
     id: "beksultan",
@@ -70,10 +70,10 @@ export const teamData = [
     image: "/images/Beka.jpeg"
   },
   {
-    id: "sanzhar-s",
-    name: "Sanzhar Sadybek",
-    role: "CAD Designer",
-    description: "Grade 8 student at NIS Shymkent. Models components in CAD (Onshape) for custom 3D printing and laser cutting.",
-    image: "/images/Sanzhar2.jpeg"
+    id: "nazym",
+    name: "Nazym Duisen",
+    role: "Inspire",
+    description: "Grade 11 at NIS Shymkent. Leads outreach activities, manages team documentation, and coordinates presentations, sponsorships, and community engagement projects.",
+    image: "/images/nazym.jpeg"
   }
 ];
