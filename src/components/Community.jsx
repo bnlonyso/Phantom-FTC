@@ -40,7 +40,7 @@ export default function Community() {
         <div className="sponsor-logos reveal">
           <h3 className="sponsor-logos-title">Our Sponsors</h3>
           <div className="sponsor-logos-row">
-            {['logo1.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo5.png', 'logo6.png', 'logo7.png'].map((logo) => (
+            {['logo1.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo5.png', 'logo6.png', 'logo7.png', 'logo8.png'].map((logo) => (
               <div key={logo} className="sponsor-logo-card">
                 <img
                   src={`/images/sponsors/${logo}`}
