@@ -255,7 +255,7 @@ export default function Community() {
 
         .sponsor-logos-row {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+          grid-template-columns: repeat(4, minmax(0, 1fr));
           gap: 1rem;
           align-items: center;
           justify-items: center;
@@ -441,12 +441,21 @@ export default function Community() {
             grid-template-columns: 1fr;
             gap: 2.5rem;
           }
+          .sponsor-logos-row {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
           .form-card {
             padding: 2rem 1.5rem;
           }
           .videos-grid {
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 1.5rem;
+          }
+        }
+
+        @media (max-width: 520px) {
+          .sponsor-logos-row {
+            grid-template-columns: 1fr;
           }
         }
       `}</style>
